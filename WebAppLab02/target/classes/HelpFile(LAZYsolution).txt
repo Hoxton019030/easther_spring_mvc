@@ -1,0 +1,12 @@
+<filter>
+	<filter-name>OSIVFilter</filter-name>//這邊值自定義
+	<filter-class>org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+	<init-param>
+		<param-name>sessionFactoryBeanName</param-name>
+		<param-value>sessionFactory</param-value>
+	</init-param>
+</filter>
+<filter-mapping>
+	<filter-name>OSIVFilter</filter-name>//與第2行相同
+	<url-pattern>/lab02/ex01/queryClassEntityById.do</url-pattern>//請求長甚麼樣子有問號就操到問號前沒有就全部複製(從專案名稱後方開始一定要有斜線)
+</filter-mapping>
